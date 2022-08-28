@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="calculator-container">
+    <div class="calculator-containner_label">
+        <h1 class="calculator-title">Tax calculator</h1>
+
+        <div class="calculator-group">
+            <div class="input-group success">
+                <label>
+                    <input type="text" class="first_input" placeholder="Enter Tax Amount">
+                </label>
+
+
+                <!-- radio toggle button to choose tax type-->
+                <div class="">
+                    <label class=" btn-secondary">VAT</label>
+
+                    <label class="btn-secondary">Income</label>
+
+                    <label class="btn-secondary">Property</label>
+
+                    <label class=" btn-secondary">Profit</label>
+
+                </div>
+
+                <div class="result">
+                    <h1 class="finaly_result">0</h1>
+                </div>
+
+                <label class="reset_reset">Reset</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block after_script %}
+<script>
+    calculatorInit();
+</script>
+
+{% endblock %}

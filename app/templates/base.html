@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="shortcut icon" type="image/png" href="../static/img/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link
+            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+            rel="stylesheet"
+    />
+    <title>Taxes</title>
+
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: #A9A9A9;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <button onClick="window.location.reload();"><img
+
+                src="../static/img/logo.png"
+                alt="Bankist logo"
+                class="nav__logo"
+                id="logo"
+        /></button>
+
+        <button class="modee" onclick="myFunction()">
+            <img src="static/img/brightness-low-fill.svg" alt=""
+            >
+        </button>
+
+        <ul class="nav__links">
+            <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/calculator' %} nav__link--btn {% endif %}" href="/calculator">Tax
+                    calculator</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/registration' %} nav__link--btn {% endif %}" href="/registration">Registration</a>
+
+
+            <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/login' %} nav__link--btn {% endif %} " href="/login">Open
+                    account</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/logout' %} nav__link--btn {% endif %}" href="/logout">Log Out</a>
+            </li>
+
+        </ul>
+    </nav>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    {% block content %} {% endblock %}
+
+</header>
+
+<script src="{{url_for('static', filename='main.js')}}"></script>
+
+{% block after_script %} {% endblock %}
+</body>
+</html>

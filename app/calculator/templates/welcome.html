@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+გამარჯობა {{ current_user.username }}
+{% else %}
+<p>hello customer</p>
+{% endif %}
+
+<div class="calculator-container">
+    <div class="calculator-containner_label">
+
+        <div class="calculator-group">
+            <div class="input-group success">
+                <table>
+                    <tr>
+                        <div class="dropdown">
+                            <select name="" class="list_dropdown">
+                                <option value="small">Small business</option>
+                                <option value="property">Propery</option>
+                                <option value="profit"> Profit</option>
+                                <option value="Vat"> Vat</option>
+                            </select>
+                        </div>
+                    </tr>
+
+                    <tr>
+
+                        <div class="smal_business_div">
+                            <input type="text" class="tax_first_input" placeholder="Enter Tax Amount">
+
+                            <div class="dropdown_month">
+                                <select name="" class="list_dropdown_month">
+                                    <option value="small">January</option>
+                                    <option value="property">February</option>
+                                    <option value="profit"> March</option>
+                                    <option value="Vat"> April</option>
+                                    <option value="Vat"> May</option>
+                                    <option value="Vat"> June</option>
+                                    <option value="Vat"> Jule</option>
+                                    <option value="Vat"> August</option>
+                                    <option value="Vat"> September</option>
+                                    <option value="Vat"> Octomber</option>
+                                    <option value="Vat"> November</option>
+                                    <option value="Vat"> December</option>
+
+                                </select>
+                            </div>
+                    <tr>
+                        <td>
+                            <div class="tax_amount">
+                                <label for="text">Tax Amount</label>
+                        </td>
+                        <td>
+                            <div class="tax_amount_value">
+                                <label for="text">0</label>
+                            </div>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <button class="send_btn">Send</button>
+                        </td>
+
+                    </tr>
+
+            </div>
+
+
+        </div>
+
+        </tr>
+
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block after_script %}
+<script>
+    smallBusinessDeclaration();
+</script>
+
+{% endblock %}
+

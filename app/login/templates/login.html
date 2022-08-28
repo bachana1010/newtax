@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+<form method="POST", class = "form">
+    {{ form.hidden_tag() }}
+       <div class="full-screen-container">
+          <div class="login-container">
+              <h1 class="login-title">Login</h1>
+
+                      <div class="input-group success">
+
+                           {{ form.email.label }} {{ form.email(class = "email") }}
+                                   <span class="msg">Valid email</span>
+                      </div>
+
+                      <div class="input-group error">
+
+                           {{ form.password.label }} {{ form.password(class = "password") }}
+                             <span class="msg">Incorrect password</span>
+                       </div>
+
+
+        {{ form.submit(class = "login-button" ) }}
+    </form>
+    </div>
+
+</div>
+
+{% endblock %}
+

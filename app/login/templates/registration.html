@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron">
+    <form method="POST">
+        {{form.hidden_tag() }}
+
+        <div class="full-registration_container">
+            <div class="registration-container">
+                <h1 class="registration-title">Registration</h1>
+                    <div class="input_group">
+                        <div class="input_group ">
+                             {{ form.email.label }} {{ form.email(class_="registration-email",placeholder="Email*") }}
+                        </div>
+
+                          <div class="input_group username">
+                             {{ form.username.label }} {{ form.username(class_="registration-username", placeholder="Your Name *") }}
+                        </div>
+
+                          <div class="input_group ">
+                                    {{ form.password.label }} {{ form.password(class_="registration-password", placeholder="Your Password *" ) }}
+                        </div>
+
+                          <div class="input_group confirm">
+                            {{ form.pass_confirm.label }} {{ form.pass_confirm(class_="registration-pass_confirm",placeholder="Confirm Password *") }}
+                        </div>
+
+                        {{ form.submit(class="btnSubmit") }}
+
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+{% endblock %}
