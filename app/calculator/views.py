@@ -30,11 +30,13 @@ def import_tax():
 
     return render_template(templs, req_pas=req_pas)
 
-@calculator_blueprint.route('/currency', methods=['GET'] )
+@calculator_blueprint.route('/currency', methods=['POST'] )
 def currency():
         currency_api = currency_course()
 
-        return jsonify(currency_api.get_specific_currencies())
+        return jsonify({
+            'currencies': currency_api.get_specific_currencies()
+        })
 
 
 

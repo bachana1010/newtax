@@ -81,7 +81,7 @@ const calculatorInit = () => {
     )
 }
 
-//
+
 
 // declaration dom
 const smallBusinessDeclaration = () => {
@@ -133,10 +133,7 @@ const smallBusinessDeclaration = () => {
 
             }
 
-                btn_send.addEventListener("click", function () {
-                    console.log(console.log(list_dropdown.value)
-                    )
-                })
+
         });
 
     land_btn.addEventListener("click", function(){
@@ -152,13 +149,13 @@ const smallBusinessDeclaration = () => {
         property_btn.style.background = "linear-gradient(135deg,  #9796f0, #fbc7d4 100%)"
         land_btn.style.background = "linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%)"
 
-    })
+    });
 
 
 }
 
 
-// const radioButtons = document.querySelectorAll('input[name="flexRadioDefault"]');
+
 
 
 
@@ -170,26 +167,36 @@ const smallBusinessDeclaration = () => {
 //
 // })
 
-// const saveScore = (first) => {
-//     let data = new FormData()
 //
-//     data.append('player1_name', first)
-//
-//     // data.append('player1', second)
-//
-//     let request = new XMLHttpRequest();
-//     request.open("POST", "http://127.0.0.1:8080/ragac");
-//     // request.setRequestHeader('accept','application/json')
-//     // request.setRequestHeader('Content-Type','application/json')
-//
-//     request.send(data);
-//     request.onload = () =>{
-//         console.log(request);
-//         console.log(request.response)
-//
-//
-//     }
-// }
+const curr = () => {
+
+    const gagzavna = document.querySelector(".gagzavna")
+    const meore = document.querySelector("#meore")
+    gagzavna.addEventListener("click",
+        function () {
+           currency()
+
+        })
+}
+
+const currency = () => {
+    let data = new FormData()
+
+
+    let request = new XMLHttpRequest();
+    request.open("POST", "http://127.0.0.1:8080/currency");
+    request.setRequestHeader('accept','application/json')
+    request.setRequestHeader('Content-Type','application/json')
+
+    request.send(data);
+    request.onload = () =>{
+        // console.log(request);
+        let response = JSON.parse(request.response)
+        console.log(response.currencies["USD"])
+
+    }
+}
+
 
 
 
