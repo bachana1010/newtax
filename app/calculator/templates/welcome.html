@@ -10,43 +10,43 @@
 
 <div class="calculator-container">
     <div class="calculator-containner_label">
-
         <div class="calculator-group">
-            <div class="input-group success">
+
+            <div class="input-group succses">
+                <div class="dropdown">
+                    <select name="" class="list_dropdown">
+                        <option value="small">Small business</option>
+                        <option value="property">Propery</option>
+                        <option value="Vat">Vat</option>
+                        <option value="income">Income</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <!--            small business section-->
+            <section class="small-business">
+                <input type="text" class="tax_first_input" placeholder="Enter Money ammount">
+                <div class="dropdown_month">
+                    <select name="" class="list_dropdown_month">
+                        <option value="small">January</option>
+                        <option value="property">February</option>
+                        <option value="profit"> March</option>
+                        <option value="Vat"> April</option>
+                        <option value="Vat"> May</option>
+                        <option value="Vat"> June</option>
+                        <option value="Vat"> Jule</option>
+                        <option value="Vat"> August</option>
+                        <option value="Vat"> September</option>
+                        <option value="Vat"> Octomber</option>
+                        <option value="Vat"> November</option>
+                        <option value="Vat"> December</option>
+
+                    </select>
+                </div>
+
                 <table>
-                    <tr>
-                        <div class="dropdown">
-                            <select name="" class="list_dropdown">
-                                <option value="small">Small business</option>
-                                <option value="property">Propery</option>
-                                <option value="profit"> Profit</option>
-                                <option value="Vat"> Vat</option>
-                            </select>
-                        </div>
-                    </tr>
 
-                    <tr>
-
-                        <div class="smal_business_div">
-                            <input type="text" class="tax_first_input" placeholder="Enter Tax Amount">
-
-                            <div class="dropdown_month">
-                                <select name="" class="list_dropdown_month">
-                                    <option value="small">January</option>
-                                    <option value="property">February</option>
-                                    <option value="profit"> March</option>
-                                    <option value="Vat"> April</option>
-                                    <option value="Vat"> May</option>
-                                    <option value="Vat"> June</option>
-                                    <option value="Vat"> Jule</option>
-                                    <option value="Vat"> August</option>
-                                    <option value="Vat"> September</option>
-                                    <option value="Vat"> Octomber</option>
-                                    <option value="Vat"> November</option>
-                                    <option value="Vat"> December</option>
-
-                                </select>
-                            </div>
                     <tr>
                         <td>
                             <div class="tax_amount">
@@ -63,28 +63,157 @@
                     <tr>
 
                         <td>
-                            <button class="send_btn">Send</button>
+                            <button class="send_btn">Send Small bussines declaration</button>
                         </td>
 
                     </tr>
+                </table>
 
-            </div>
+            </section>
 
+
+            <!--            property tax section-->
+
+            <section class="property_tax">
+                <div class="check">
+                    <button class="land_btn">land</button>
+                    <button class="property_btn">property</button>
+
+
+                </div>
+
+                <section class="land_tax_section">
+
+                    <input type="text" class="tax_first_input" placeholder="Enter Land Hectare ">
+
+                    <div class="dropdown_month">
+                        <select name="" class="list_dropdown_month">
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020"> 2020</option>
+                            <option value="2019"> 2019</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown_month">
+                        <select name="" class="list_dropdown_month">
+                            <option value="Kutaisi">Kutaisi</option>
+                            <option value="Tbilisi">Tbilisi</option>
+                            <option value="Batumi"> Batumi</option>
+                            <option value="Sokhum"> Sokhum</option>
+                        </select>
+                    </div>
+
+                    <div class="label_land_result">
+
+                        <label for="land_result" class="label_tax_land">Tax Amount</label>
+                    </div>
+
+
+                    <button class="send_btn">Send Land Declaration</button>
+                </section>
+
+                <section class="property_tax_section">
+
+                    <input type="text" class="tax_first_input" placeholder="Enter Your Year Income Money Mount ">
+                    <input type="text" class="tax_first_input" placeholder="Enter Your Property Value ">
+
+                    <div class="dropdown_month">
+                        <select name="" class="list_dropdown_month">
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020"> 2020</option>
+                            <option value="2019"> 2019</option>
+                        </select>
+                    </div>
+                    <div class="label_property_result">
+
+                        <label for="land_result" class="label_tax_property">Tax Amount</label>
+                    </div>
+
+                    <button class="send_btn">Send Property Declaration</button>
+
+
+                </section>
+
+            </section>
+
+<!--            Income Tax Section-->
+            <section class="IncomeTaxSection">
+                <input type="text" class="tax_first_input" placeholder="Gross income">
+                <input type="text" class="tax_first_input" placeholder="Deductions money amount">
+
+                    <div class="dropdown_month">
+                    <select name="" class="list_dropdown_month">
+                        <option value="small">January</option>
+                        <option value="property">February</option>
+                        <option value="profit"> March</option>
+                        <option value="Vat"> April</option>
+                        <option value="Vat"> May</option>
+                        <option value="Vat"> June</option>
+                        <option value="Vat"> Jule</option>
+                        <option value="Vat"> August</option>
+                        <option value="Vat"> September</option>
+                        <option value="Vat"> Octomber</option>
+                        <option value="Vat"> November</option>
+                        <option value="Vat"> December</option>
+
+                    </select>
+
+
+                        <div class="label_property_result">
+
+                        <label for="land_result" class="label_tax_property">Tax Amount</label>
+                    </div>
+
+                    <button class="send_btn">Send Income Declaration</button>
+
+        </section>
+
+            <!--            Vat Tax section-->
+
+            <section class="VatTaxSection">
+                <input type="text" class="tax_first_input" placeholder="Taxable Amount">
+                <input type="text" class="tax_first_input" placeholder="The amount of VAT paid at the previous stage">
+
+                    <div class="dropdown_month">
+                    <select name="" class="list_dropdown_month">
+                        <option value="small">January</option>
+                        <option value="property">February</option>
+                        <option value="profit"> March</option>
+                        <option value="Vat"> April</option>
+                        <option value="Vat"> May</option>
+                        <option value="Vat"> June</option>
+                        <option value="Vat"> Jule</option>
+                        <option value="Vat"> August</option>
+                        <option value="Vat"> September</option>
+                        <option value="Vat"> Octomber</option>
+                        <option value="Vat"> November</option>
+                        <option value="Vat"> December</option>
+
+                    </select>
+
+
+                        <div class="label_property_result">
+
+                        <label for="land_result" class="label_tax_property">Tax Amount</label>
+                    </div>
+
+                    <button class="send_btn">Send Vat Declaration</button>
+
+            </section>
 
         </div>
-
-        </tr>
-
-        </table>
     </div>
-
 </div>
+
 
 {% endblock %}
 
 {% block after_script %}
 <script>
     smallBusinessDeclaration();
+
 </script>
 
 {% endblock %}

@@ -1016,7 +1016,7 @@ h4 {
     border-color: black;
     width: 600px;
     margin-top:10px;
-  display:inline-block;
+    box-shadow: #9be15d 0 0 20px;
 
 }
 
@@ -1026,7 +1026,8 @@ h4 {
 	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
   width: 500px;
   margin-top: 40px;
-    display:inline-block;
+      box-shadow: #9be15d 0 0 20px;
+
 
 }
 
@@ -1035,7 +1036,8 @@ h4 {
   width: 100px;
   	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
   text-align: center;
-    display:inline-block;
+      box-shadow: #9be15d 0 0 20px;
+
 
 
 
@@ -1048,6 +1050,86 @@ h4 {
   margin-top:30px;
   background-position: center;
   margin-left:200px;
-    display:inline-block;
+      box-shadow: #9be15d 0 0 20px;
+
+
 
 }
+.small-business{
+  display: none;
+}
+.property_tax{
+  display: none;
+}
+
+.land_tax_section{
+  display:none
+}
+
+.property_tax_section{
+  display:none
+}
+
+.VatTaxSection{
+  display: none;
+}
+
+.IncomeTaxSection{
+  display:none
+}
+
+
+.land_btn{
+  background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
+    width:200px;
+  border-radius: 20px;
+  margin-top:30px;
+  background-position: center;
+  margin-left:50px;
+
+}
+
+.property_btn{
+  background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
+    width:200px;
+  border-radius: 20px;
+  margin-top:30px;
+  background-position: center;
+  margin-left:50px;}
+
+.label_land_result{
+    background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
+  margin-top:30px;
+height: 50px;
+    box-shadow: #9be15d 0 0 20px;
+
+}
+.label_property_result{
+    background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
+  margin-top:30px;
+height: 50px;
+    box-shadow: #9be15d 0 0 20px;
+
+}
+
+.label_tax_property{
+    margin-left:250px;
+
+}
+
+.label_tax_land{
+  margin-left:250px;
+
+}
+
+
+.result_duty{
+  margin-top:100px;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+   box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  height: 50px;
+  width:700px;
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);}

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, flash,request, jsonify
 from flask_login import LoginManager, logout_user, login_required
 from flask_cors import CORS, cross_origin
-
+from app.services.currency import currency_course
 
 
 
@@ -22,6 +22,21 @@ def calculator():
     templs = ["calculator.html", "base.html"]
 
     return render_template(templs, req_pas=req_pas)
+
+@calculator_blueprint.route('/importTax', methods=['GET'] )
+def import_tax():
+    req_pas = request.path
+    templs = ["taximport.html", "base.html"]
+
+    return render_template(templs, req_pas=req_pas)
+
+@calculator_blueprint.route('/currency', methods=['GET'] )
+def currency():
+        currency_api = currency_course()
+
+        return jsonify(currency_api.get_specific_currencies())
+
+
 
 
 @calculator_blueprint.route('/welcome', methods=['GET', 'POST'])

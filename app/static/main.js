@@ -85,37 +85,81 @@ const calculatorInit = () => {
 
 // declaration dom
 const smallBusinessDeclaration = () => {
-    const wel = document.querySelector('.list_dropdown')
-    const month_dropdown = document.querySelector(".list_dropdown_month")
-    const first_input = document.querySelector(".tax_first_input")
-    const tax_amount = document.querySelector(".tax_amount")
-    const tax_value = document.querySelector('.tax_amount_value')
+    const list_dropdown = document.querySelector('.list_dropdown')
     const btn_send = document.querySelector(".send_btn")
 
-    wel.addEventListener('click',
-        function () {
+    const propery_tax = document.querySelector(".property_tax")
+    const small_bussines = document.querySelector(".small-business")
 
-            if (wel.value != "small") {
-                console.log(wel.value)
-                month_dropdown.style.display = 'none'
-                first_input.style.display = 'none'
-                tax_amount.style.display = 'none'
-                tax_value.style.display = 'none'
-                btn_send.style.display = 'none'
-            } else {
-                month_dropdown.style.display = 'inline-block'
-                first_input.style.display = 'inline-block'
-                tax_amount.style.display = 'inline-block'
-                tax_value.style.display = 'inline-block'
-                btn_send.style.display = 'inline-block'
+    const land_btn = document.querySelector(".land_btn")
+    const property_btn = document.querySelector(".property_btn")
+    const landTax = document.querySelector(".land_tax_section")
+    const propertyTax = document.querySelector(".property_tax_section")
+
+    const vat_tax = document.querySelector(".VatTaxSection")
+    const income_tax = document.querySelector(".IncomeTaxSection")
+
+    list_dropdown.addEventListener('click',
+        function () {
+            if (list_dropdown.value == "small") {
+                small_bussines.style.display = "inline-block"
+                propery_tax.style.display = "none"
+                vat_tax.style.display = "none"
+                income_tax.style.display = "none"
+            }
+            else if (list_dropdown.value == "property"){
+                propery_tax.style.display = "inline-block"
+                small_bussines.style.display = "none"
+                vat_tax.style.display = "none"
+                income_tax.style.display = "none"
+
+
+            }
+            else if (list_dropdown.value == "Vat"){
+                vat_tax.style.display = "inline-block"
+                small_bussines.style.display = "none"
+                propery_tax.style.display = "none"
+                income_tax.style.display = "none"
+
+
+            }
+            else if (list_dropdown.value == "income"){
+                income_tax.style.display = "inline-block"
+                small_bussines.style.display = "none"
+                propery_tax.style.display = "none"
+                vat_tax.style.display = "none"
+
+
+
+            }
 
                 btn_send.addEventListener("click", function () {
-                    console.log(console.log(wel.value)
+                    console.log(console.log(list_dropdown.value)
                     )
                 })
-            }
         });
+
+    land_btn.addEventListener("click", function(){
+        landTax.style.display = "inline-block"
+        propertyTax.style.display = "none"
+        land_btn.style.background = "linear-gradient(135deg,  #9796f0, #fbc7d4 100%)"
+        property_btn.style.background = "linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%)"
+    });
+
+    property_btn.addEventListener("click", function(){
+        landTax.style.display = "none"
+        propertyTax.style.display = "inline-block"
+        property_btn.style.background = "linear-gradient(135deg,  #9796f0, #fbc7d4 100%)"
+        land_btn.style.background = "linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%)"
+
+    })
+
+
 }
+
+
+// const radioButtons = document.querySelectorAll('input[name="flexRadioDefault"]');
+
 
 
 // const first_button = document.querySelector(".api_btn")
