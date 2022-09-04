@@ -159,43 +159,45 @@ const smallBusinessDeclaration = () => {
 
 
 
-// const first_button = document.querySelector(".api_btn")
-//
-// first_button.addEventListener("click",function (){
-//     const first_value = document.querySelector(".tax_first_input").value
-//     saveScore(first_value)
-//
-// })
-
 //
 const curr = () => {
 
     const gagzavna = document.querySelector(".gagzavna")
     const meore = document.querySelector("#meore")
-    gagzavna.addEventListener("click",
-        function () {
-           currency()
+    gagzavna.addEventListener("click",  function  () {
+        c =  start()
+        console.log(c)
 
-        })
+    })
 }
 
-const currency = () => {
-    let data = new FormData()
+async function start(){
+    const response = await fetch("http://127.0.0.1:8081/currency")
+    const data = await response.json()
+    // currencyList(data.currencies)
+    b = data.currencies["USD"]
+    g = data.currencies["TRY"]
 
-
-    let request = new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1:8080/currency");
-    request.setRequestHeader('accept','application/json')
-    request.setRequestHeader('Content-Type','application/json')
-
-    request.send(data);
-    request.onload = () =>{
-        // console.log(request);
-        let response = JSON.parse(request.response)
-        console.log(response.currencies["USD"])
-
+    console.log(b,g)
     }
-}
+
+start()
+
+// function currencyList(list){
+//     document.getElementById("breed").innerHTML = `
+//      <select>
+//         <option>choose a Valute</option>
+//         ${Object.keys(list).map(function(breed){
+//             console.log(Object.keys(list))
+//             return `<option>${breed}</option>`
+//
+//         }).join('')}
+//         </select>
+//
+//     `;
+//
+//
+// }
 
 
 
