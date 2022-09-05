@@ -46,10 +46,11 @@ def currency():
 # @cross_origin()
 
 def welcome():
+    req_pas = request.path
+    templs = ["welcome.html", "base.html"]
 
+    return render_template(templs, req_pas=req_pas)
 
-
-    return render_template("welcome.html")
 
 
 @calculator_blueprint.route('/logout', methods=[ 'GET'])
