@@ -162,42 +162,72 @@ const smallBusinessDeclaration = () => {
 //
 const curr = () => {
 
-    const gagzavna = document.querySelector(".gagzavna")
-    const meore = document.querySelector("#meore")
-    gagzavna.addEventListener("click",  function  () {
-        c =  start()
-        console.log(c)
+    const gagzavna = document.querySelector(".i_calculation")
+    const drop_currency = document.querySelector(".list_dropdown_currency")
+    const fi_cur = document.querySelector(".finaly_result")
+    const fir_inp = document.querySelector(".first_input")
 
-    })
-}
-
-async function start(){
+    gagzavna.addEventListener("click",async function start(){
     const response = await fetch("http://127.0.0.1:8081/currency")
     const data = await response.json()
-    // currencyList(data.currencies)
-    b = data.currencies["USD"]
-    g = data.currencies["TRY"]
 
-    console.log(b,g)
+        const pay_tax = function(){
+                    fi_cur.textContent = fin_result
+                    fi_cur.style.backgroundColor = "yellowgreen"
+        }
+          const not_pay_tax = function(){
+                    fi_cur.textContent = fin_result
+                    fi_cur.style.backgroundColor = "red"
+        }
+        if( drop_currency.value == "USD"){
+            fin_result = fir_inp.value * Number(data.currencies["USD"])
+            if (fin_result <300){
+                  pay_tax()
+
+            }else{
+                not_pay_tax()
+
+            }
+        }
+        else if( drop_currency.value == "GBP" ){
+            fin_result = fir_inp.value * Number(data.currencies["GBP"])
+                if (fin_result <300){
+                   pay_tax()
+
+            }else{
+                not_pay_tax()
+            }
+        }
+        else if( drop_currency.value == "EUR"){
+            fin_result = fir_inp.value * Number(data.currencies["EUR"])
+                if (fin_result <300){
+                  pay_tax()
+
+              }else{
+                not_pay_tax()
+            }
+        }
+        else if( drop_currency.value == "TRY"){
+            fin_result = fir_inp.value * Number(data.currencies["TRY"])
+                if (fin_result <300){
+                       pay_tax()
+
+              }else{
+                not_pay_tax()
+            }
+        }
+        else if( drop_currency.value == "CHF"){
+            fin_result = fir_inp.value * Number(data.currencies["CHF"])
+                if (fin_result <300){
+                   pay_tax()
+
+              }
+        else{
+                not_pay_tax()
+            }}
+
+         })
     }
-
-start()
-
-// function currencyList(list){
-//     document.getElementById("breed").innerHTML = `
-//      <select>
-//         <option>choose a Valute</option>
-//         ${Object.keys(list).map(function(breed){
-//             console.log(Object.keys(list))
-//             return `<option>${breed}</option>`
-//
-//         }).join('')}
-//         </select>
-//
-//     `;
-//
-//
-// }
 
 
 
