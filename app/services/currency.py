@@ -1,5 +1,6 @@
 import requests
 
+
 class currency_course:
     def get_response(self):
         return requests.get('https://any.ge/currency/api.php?info=yvela&fbclid=IwAR2oIXPWQoDNjVkj9zADQukl0HeA08WehIpN6MsH8OIMtBLFFBGnWukIvVU')
@@ -32,4 +33,3 @@ class currency_course:
                 main_dict[currency_code] = rate_valley
 
         return main_dict
-

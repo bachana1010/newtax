@@ -1,10 +1,10 @@
 from flask import Flask
-from app.config import *
+# from app.config import *
 from app.extentions import db
 from app.log_in import login_manager
 
 
-def create_app(config_file = 'config.py'):
+def create_app(config_file='config.py'):
     app = Flask(__name__)
     app.config.from_pyfile(config_file)
     register_extension(app)
@@ -13,13 +13,16 @@ def create_app(config_file = 'config.py'):
 
     return app
 
+
 login_manager.login_view = "user.login"
 
 
 def register_extension(app):
     db.init_app(app)
 
+
 def register_blouprint(app):
+
     from app.calculator.views import calculator_blueprint
     app.register_blueprint(calculator_blueprint)
 

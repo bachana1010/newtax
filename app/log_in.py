@@ -1,4 +1,4 @@
 
-from flask_login import LoginManager, logout_user, login_required
+from flask_login import LoginManager
 
 login_manager = LoginManager()

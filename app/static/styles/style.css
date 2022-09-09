@@ -988,25 +988,37 @@ h4 {
 
 
 /*welcome page*/
-.list_dropdown{
-    	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
-  box-shadow: #9be15d 0 0 20px;
-  width: 600px;
-
-}
-
+.list_dropdown,
+.list_dropdown_city,
+.list_dropdown_year,
 .list_dropdown_month{
     	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
   box-shadow: #9be15d 0 0 20px;
   width: 600px;
-  margin-top: 30px;
-    display:inline-block;
-
-
 
 }
 
-.tax_first_input{
+.sb_button,
+.land_button,
+.property_button,
+.income_button,
+.vat_button{
+background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
+  width: 500px;
+  margin-top: 40px;
+      box-shadow: #9be15d 0 0 20px;}
+
+
+
+
+.tax_land_input,
+.tax_first_input,
+.property_property_input,
+.property_property_input1,
+.vat_first_input,
+.vat_second_input,
+.income_first_input,
+.income_second_input{
   	position:relative;
 	font-size: 1em;
 	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
@@ -1017,21 +1029,27 @@ h4 {
     width: 600px;
     margin-top:10px;
     box-shadow: #9be15d 0 0 20px;
-
 }
 
 
 
-.tax_amount{
-	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
-  width: 500px;
-  margin-top: 40px;
-      box-shadow: #9be15d 0 0 20px;
+/*.tax_amount{*/
+/*	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);*/
+/*  width: 500px;*/
+/*  margin-top: 40px;*/
+/*      box-shadow: #9be15d 0 0 20px;*/
 
 
-}
+/*}*/
 
-.tax_amount_value{
+
+
+.tax_amount_value,
+.label_tax_land,
+.label_tax_property,
+.label_tax_income,
+.label_tax_vat{
+
   margin-top:40px;
   width: 100px;
   	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
@@ -1040,10 +1058,20 @@ h4 {
 
 
 
-
 }
 
-.send_btn{
+.user_id{margin-top:40px;
+  width: 100px;
+  	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
+  text-align: center;
+      box-shadow: #9be15d 0 0 20px;}
+
+
+.send_btn,
+.send_land_btn,
+.send_property_btn,
+.send_vat_btn,
+.send_income_btn{
     	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
     width:200px;
   border-radius: 20px;
@@ -1097,30 +1125,19 @@ h4 {
   background-position: center;
   margin-left:50px;}
 
-.label_land_result{
+
+.label_property_result,
+.label_vat_result{
     background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
   margin-top:30px;
 height: 50px;
     box-shadow: #9be15d 0 0 20px;
 
 }
-.label_property_result{
-    background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
-  margin-top:30px;
-height: 50px;
-    box-shadow: #9be15d 0 0 20px;
 
-}
 
-.label_tax_property{
-    margin-left:250px;
 
-}
 
-.label_tax_land{
-  margin-left:250px;
-
-}
 
 
 .result_duty{

@@ -36,14 +36,7 @@
 
 <header class="header">
     <nav class="nav">
-<!--        <button onClick="window.location.reload();"><img-->
-
-<!--                src="../static/img/logo.png"-->
-<!--                alt="Bankist logo"-->
-<!--                class="nav__logo"-->
-<!--                id="logo"-->
-<!--        /></button>-->
-
+        {% if session['logged_in'] %}
 
         <ul class="nav__links">
             <li class="nav__item">
@@ -58,22 +51,45 @@
              <li class="nav__item">
                 <a class="nav__link{% if req_pas == '/welcome' %} nav__link--btn {% endif %}" href="/welcome">Personal page</a>
             </li>
-
-            <li class="nav__item">
-                <a class="nav__link{% if req_pas == '/registration' %} nav__link--btn {% endif %}" href="/registration">Registration</a>
-
-            </li>
-            <li class="nav__item">
-                <a class="nav__link{% if req_pas == '/login' %} nav__link--btn {% endif %} " href="/login">Open
-                    account</a>
-            </li>
-            <li class="nav__item">
+              <li class="nav__item">
                 <a class="nav__link{% if req_pas == '/logout' %} nav__link--btn {% endif %}" href="/logout">Log Out</a>
             </li>
+                {% else %}
+                    <ul class="nav__links">
+            <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/calculator' %} nav__link--btn {% endif %}" href="/calculator">Tax
+                    calculator</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/importTax' %} nav__link--btn {% endif %}" href="/importTax">Import
+                    Duty Calculator</a>
+            </li>
+
+             <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/welcome' %} nav__link--btn {% endif %}" href="/welcome">Personal page</a>
+            </li>
+
+                <li class="nav__item">
+                    <a class="nav__link{% if req_pas == '/registration' %} nav__link--btn {% endif %}" id="reg" href="/registration">Registration</a>
+
+
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link{% if req_pas == '/login' %} nav__link--btn {% endif %} " id="log"  href="/login">Open
+                        account</a>
+                </li>
+                           <li class="nav__item">
+                <a class="nav__link{% if req_pas == '/logout' %} nav__link--btn {% endif %}" href="/logout">Log Out</a>
+            </li>
+                {% endif %}
+
+
+
+
+
 
         </ul>
     </nav>
-
     {% block content %} {% endblock %}
 
 </header>
