@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">gross_income </th>
+      <th scope="col">deductions</th>
+      <th scope="col">month</th>
+        <th scope="col">amount</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+        {% for income_list in income_list %}
+
+     <tr>
+
+      <th scope="row">{{ income_list.id }}</th>
+      <td> {{ income_list.gross_income }} </td>
+      <td>{{ income_list.deductions }}</td>
+      <td>{{ income_list.month }}</td>
+         <td>{{ income_list.tax_amount }}</td>
+
+    </tr>
+        {% endfor %}
+
+
+  </tbody>
+</table>
+
+{% endblock %}>

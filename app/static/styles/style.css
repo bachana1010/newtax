@@ -776,7 +776,7 @@ h4 {
 	color: hsl(var(--success-hsl));
   }
 
-    .email{
+    #email{
 	font-size: 1.25rem;
 	padding: .5em;
 	background-color: hsl(var(--primary-light-hsl), .3);
@@ -991,7 +991,9 @@ h4 {
 .list_dropdown,
 .list_dropdown_city,
 .list_dropdown_year,
-.list_dropdown_month{
+.list_dropdown_month,
+.list_dropdown_month_vat,
+.list_dropdown_month_income{
     	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
   box-shadow: #9be15d 0 0 20px;
   width: 600px;
@@ -1071,13 +1073,18 @@ background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
 .send_land_btn,
 .send_property_btn,
 .send_vat_btn,
-.send_income_btn{
+.send_income_btn,
+.show_sb_declaration,
+.show_land_declaration,
+.show_property_declaration,
+.show_vat_declaration,
+.show_income_declaration{
     	background: linear-gradient(135deg,  #485563,#2932,#7AA1D2 100%);
-    width:200px;
+    width:300px;
   border-radius: 20px;
   margin-top:30px;
   background-position: center;
-  margin-left:200px;
+  margin-left:150px;
       box-shadow: #9be15d 0 0 20px;
 
 
@@ -1180,4 +1187,47 @@ height: 50px;
 
 
 
+}
+
+
+
+/*#message-succsesful declartion send*/
+.alert{
+  padding: 20px;
+  background: linear-gradient(135deg, #add100,#7b920a, 100%);
+  margin-top:30px;
+height: 50px;
+  width: 400px;
+    margin-left:100px;
+    box-shadow: #9be15d 0 0 20px;
+text-align: center;
+display:none}
+
+.alert_land,
+.alert_property,
+.alert_vat,
+.alert_income{
+  padding: 20px;
+  background: linear-gradient(135deg, #add100,#7b920a, 100%);
+  margin-top:30px;
+height: 50px;
+  width: 400px;
+    margin-left:100px;
+    box-shadow: #9be15d 0 0 20px;
+text-align: center;
+display:none}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }

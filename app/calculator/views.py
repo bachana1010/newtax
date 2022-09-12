@@ -161,6 +161,34 @@ def income_tax():
 
     return jsonify()
 
+@calculator_blueprint.route('/sb_list', methods=['GET', 'POST'])
+def sb_list_items():
+    sb_list = SmallBussines.query.all()
+    return render_template('sb_list.html', sb_list=sb_list)
+
+
+@calculator_blueprint.route('/property_land_list', methods=['GET', 'POST'])
+def property_land_list():
+    land_list = Property.query.all()
+    return render_template('land_list.html', land_list=land_list)
+
+@calculator_blueprint.route('/property_property_list', methods=['GET', 'POST'])
+def property_property_list():
+    property_list = property_property_base.query.all()
+    return render_template('property_property_list.html', property_list=property_list)
+
+@calculator_blueprint.route('/vat_list', methods=['GET', 'POST'])
+def vat_list():
+    vat_list = vat_tax_base.query.all()
+    return render_template('vat_list.html', vat_list=vat_list)
+
+
+
+@calculator_blueprint.route('/income_list', methods=['GET', 'POST'])
+def income_list():
+    income_list = income.query.all()
+    return render_template('income_list.html', income_list=income_list)
+
 
 @calculator_blueprint.route('/logout', methods=['GET'])
 def logout():

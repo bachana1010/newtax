@@ -29,7 +29,7 @@
 <!--            <form action="/welcome" method="post">-->
             <section class="small-business">
                 <div>
-                <input type="text" class="tax_first_input" name="inp" placeholder="Enter Money ammount">
+                <input type="text" class="tax_first_input" name="inp" placeholder="Enter Money ammount" >
                 </div>
 
                 <div class="dropdown_month">
@@ -69,9 +69,28 @@
                     <tr>
 
                         <td>
-                            <button class="send_btn" name='but' onclick="myFunction()">Send Small bussines declaration</button>
+                            <button class="send_btn" name='but' disabled onclick="sb_api()" >Send Small bussines declaration</button>
+
                         </td>
 
+                        <tr>
+                        <td>
+                                <button class="show_sb_declaration" onclick="clear_information()">   <a href="/sb_list">small busines list</a>
+
+                                </button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                <div class="alert">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      <strong>Sent successfully!</strong>
+                    </div>
+
+                        </td>
+                        </tr>
                     </tr>
                 </table>
 <!--                    </form>-->
@@ -115,7 +134,7 @@
                     <tr>
                         <td>
                           <div class="label_land_result">
-                        <button type="text" class="land_button" name= "lab" for="text"  onmouseover="Land_amount()"> Tax Value </button>
+                        <button type="text" class="land_button" name= "lab" for="text"  onclick="Land_amount()"> Tax Value </button>
                         <div>
                         </td>
                         <td>
@@ -129,8 +148,27 @@
                     <tr>
 
                         <td>
-                            <button class="send_land_btn" onClick="Property_api()">Send Land Declaration</button>
+                            <button class="send_land_btn" disabled onClick="Property_api()">Send Land Declaration</button>
                         </td>
+
+                        <tr>
+                            <td>
+                                <button class="show_land_declaration" onclick="clear_information()">   <a href="/property_land_list">land dec  list</a>
+
+                                </button>
+                    </tr>
+                        </td>
+                        <tr>
+
+                        <td>
+
+                <div class="alert_land">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      <strong>Sent successfully!</strong>
+                    </div>
+
+                        </td>
+                        </tr>
 
                     </tr>
                 </table>
@@ -160,7 +198,7 @@
                     <tr>
                         <td>
                           <div class="label_land_result">
-                        <button type="text" class="property_button" name= "lab" for="text"  onmouseover="property_amount()"> Tax Value </button>
+                        <button type="text" class="property_button" name= "lab" for="text"  onclick="property_amount()"> Tax Value </button>
                         <div>
                         </td>
                         <td>
@@ -174,8 +212,26 @@
                     <tr>
 
                         <td>
-                    <button class="send_property_btn" onclick="Property_property_api()">Send Property Declaration</button>
+                    <button class="send_property_btn" disabled onclick="Property_property_api()">Send Property Declaration</button>
                         </td>
+                     <tr>
+                            <td>
+                                <button class="show_property_declaration" onclick="clear_information()">   <a href="/property_property_list">property dec list</a>
+
+                                </button>
+                    </tr>
+                        </td>
+                        <tr>
+
+                        <td>
+
+                <div class="alert_property">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      <strong>Sent successfully!</strong>
+                    </div>
+
+                        </td>
+                        </tr>
 
                     </tr>
                 </table>
@@ -195,7 +251,7 @@
                 <input type="text" class="income_second_input" placeholder="Deductions money amount">
 
                     <div class="dropdown_month">
-                    <select name="" class="list_dropdown_month">
+                    <select name="" class="list_dropdown_month_income">
                       <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March"> March</option>
@@ -215,7 +271,7 @@
                     <tr>
                         <td>
                           <div class="label_land_result">
-                            <button type="text" class="income_button" name= "lab" for="text"  onmouseover="income_amount()"> Tax Value </button>
+                            <button type="text" class="income_button" name= "lab" for="text"  onclick="income_amount()"> Tax Value </button>
                         <div>
                         </td>
                         <td>
@@ -229,8 +285,26 @@
                     <tr>
 
                         <td>
-                    <button class="send_income_btn" onclick="income_api()">Send Income Declaration</button>
+                    <button class="send_income_btn" disabled onclick="income_api()">Send Income Declaration</button>
                         </td>
+                  <tr>
+                            <td>
+                                <button class="show_income_declaration" onclick="clear_information()">   <a href="/income_list">income dec list</a>
+
+                                </button>
+                    </tr>
+                        </td>
+                        <tr>
+
+                        <td>
+
+                <div class="alert_income">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      <strong>Sent successfully!</strong>
+                    </div>
+
+                        </td>
+                        </tr>
 
                     </tr>
                 </table>
@@ -247,7 +321,7 @@
                 <input type="text" class="vat_second_input" placeholder="The amount of VAT paid at the previous stage">
 
                     <div class="dropdown_month">
-                    <select name="" class="list_dropdown_month">
+                    <select name="" class="list_dropdown_month_vat">
                    <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March"> March</option>
@@ -268,7 +342,7 @@
                     <tr>
                         <td>
                           <div class="label_land_result">
-                            <button type="text" class="vat_button" name= "lab" for="text"  onmouseover="vat_amount()"> Tax Value </button>
+                            <button type="text" class="vat_button" name= "lab" for="text"  onclick="vat_amount()"> Tax Value </button>
                         <div>
                         </td>
                         <td>
@@ -282,8 +356,28 @@
                     <tr>
 
                         <td>
-                    <button class="send_vat_btn" onclick="vat_api()">Send Vat Declaration</button>
+                    <button class="send_vat_btn" disabled onclick="vat_api()">Send Vat Declaration</button>
                         </td>
+
+                         <tr>
+                            <td>
+                                <button class="show_vat_declaration" onclick="clear_information()">   <a href="/vat_list">vat dec list</a>
+
+                                </button>
+                    </tr>
+                        </td>
+                        <tr>
+
+                        <td>
+
+                <div class="alert_vat">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      <strong>Sent successfully!</strong>
+                    </div>
+
+                        </td>
+                        </tr>
+
 
                     </tr>
                 </table>
@@ -299,6 +393,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 {% endblock %}

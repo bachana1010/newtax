@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">income money</th>
+      <th scope="col">property_cost</th>
+      <th scope="col">year</th>
+        <th scope="col">amount</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+        {% for vat_list in vat_list %}
+
+     <tr>
+
+      <th scope="row">{{ vat_list.id }}</th>
+      <td> {{ vat_list.taxable_amount }} </td>
+      <td>{{ vat_list.last_tax }}</td>
+      <td>{{ vat_list.month }}</td>
+         <td>{{ vat_list.tax_amount }}</td>
+
+    </tr>
+        {% endfor %}
+
+
+  </tbody>
+</table>
+
+{% endblock %}>
